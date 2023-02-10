@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      .navbar {
+        background-color: teal;
+        display: flex;
+        justify-content:left;
+        padding: 22px 30px;
+      
+      }
+      
+      .navbar a {
+        color: white;
+        text-decoration:solid;
+        font-size: 1.3rem;
+        margin-right: 20px;
+        max-width:800px;
+        padding-left: 10px;
+      }
+      
+      header {
+      
+        padding: 20px;
+        text-align: left;
+        margin:0 auto;
+        max-width:800px;
+      }
+
+      h2{
+        margin:0 auto;
+        max-width:800px;
+      }
+      
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+        background-color: teal;
+      }
+      
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+     
+.list{
+    text-align: left;
+    
+}
+ form{
+    text-align: center;
+ }
+ font{
+    text-align: left;
+ }
+
+ 
+ </style>
+  </head>
+  <body>
+    <div class="navbar">
+        <a class="font" href="index.html">
+            <span class="text-uppercase font-weight-bold left" style="text-align: left;">DocsEditor</span>
+          </a>
+          
+          <a href="index.html">Home</a>
+          
+          <div class="dropdown">
+            <a href="#">Convert</a>
+            <div class="dropdown-content">
+            
+              <a href="jpgToPdf.html">JPG to PDF</a>
+              <a href="pdfToExcel.html">PDF to Excel</a>
+              <a href="jpgToExcel.html">JPG to Excel</a>
+            </div>
+          </div>
+          <a href="#">About</a>
+    </div>
+    <header class = form>
+        
+      <div style="font-size:1.3rem; margin:0;max-width:800px;">
+      <ul class="list">
+        <div>
+            <h2>About DocsEditor</h2>
+            <p>DocsEditor is a user-friendly platform that allows you to convert images to PDF, JPG to Excel, and PDF to Excel with ease.</p>
+            <h2>Contact Us</h2>
+            <p>For support or to share feedback, please send us an email at sachinparihar98120@gmail.com. We would love to hear from you!</p>f
+          </div>
+          
+      </ul>
+   </div>
+    </header>
+    <footer>
+        
+      <p>Copyright © 2023</p>
+    
+    </footer>
+  </body>
+</html>
