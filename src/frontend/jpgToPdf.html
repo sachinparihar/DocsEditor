@@ -143,14 +143,12 @@ input[type="file"] {
         <img src="images/imgtopdf.jpg" alt="Italian Trulli">
       </ul>
 
-      <div class="mb-3">
-        <label for="formFile" class="form-label"></label>
-        <input class="form-control" type="file" id="formFile">
-        <div class="d-grid gap-2">
-          <button class="btn btn-primary" style="color: black; font-size:  1rem; margin-top: 20px; background-color: rgb(57, 224, 236); border: #fff 1px;" type="button">Upload</button>
-        </div>
-      </div>
-    
+      <form action="/upload" method="post" enctype="multipart/form-data">
+   
+        <input type="file" name="files" multiple><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </form>
       </div>
    </div>
     </header>
