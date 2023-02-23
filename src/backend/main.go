@@ -14,8 +14,8 @@ func main() {
 	fileserver := http.FileServer(http.Dir("../frontend"))
 	http.Handle("/", fileserver)
 	http.HandleFunc("/upload", handleUpload)
-	fmt.Print("The server is running at 8000 \n")
-	if err := http.ListenAndServe(":8001", nil); err != nil {
+	fmt.Print("The server is running at 8080 \n")
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
 	}
 }
