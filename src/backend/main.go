@@ -67,7 +67,7 @@ func convertImagesToPDF(files []*multipart.FileHeader, w http.ResponseWriter) *g
 	for _, file := range files {
 		extension := filepath.Ext(file.Filename)
 		if extension != ".jpg" && extension != ".jpeg" && extension != ".png" {
-			http.Error(w, "The extension is not matched!", http.StatusBadRequest)
+			http.Error(w, "The extension is not matched! The image must be in jpg,jpeg and png format.", http.StatusBadRequest)
 			return nil
 		}
 
@@ -84,9 +84,17 @@ func convertImagesToPDF(files []*multipart.FileHeader, w http.ResponseWriter) *g
 			return nil
 		}
 
-		pdf.AddPage()
+		width := 595.28
+		height := 841.89
+		pdf.AddPageWithOption(gopdf.PageOption{PageSize: &gopdf.Rect{W: width, H: height}})
 
-		pdf.ImageByHolder(image, 10, 17, nil)
+		marginX := 20.0
+		marginY := 50.0
+		imgWidth := width - 2*marginX
+		imgHeight := height - 2*marginY
+		rect := &gopdf.Rect{W: imgWidth, H: imgHeight}
+
+		pdf.ImageByHolder(image, marginX, marginY, rect)
 	}
 
 	return &pdf
