@@ -19,5 +19,5 @@ RUN go build -o main .
 # Expose port 8080 for the application
 EXPOSE 8080
 
-# Run the Go application
+# Run the Go applicationt
 CMD ["./main"]
